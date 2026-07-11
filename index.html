@@ -24,105 +24,31 @@
     }
   </script>
 </head>
-<body class="bg-[#0f172a] text-slate-800 antialiased min-h-screen flex items-center justify-center p-4 sm:p-8">
+<body class="bg-[#030712] text-slate-800 antialiased min-h-screen flex items-center justify-center p-0 m-0 relative overflow-hidden select-none">
 
-  <!-- Desktop Presentation Layout Wrapper -->
-  <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+  <!-- Ambient background glow circles -->
+  <div class="desktop-glow absolute top-10 left-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl pointer-events-none animate-float" style="animation-duration: 15s;"></div>
+  <div class="desktop-glow absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none animate-float" style="animation-duration: 20s; animation-delay: 2s;"></div>
+
+  <!-- Centralized Smartphone Mockup -->
+  <div class="device-mockup">
+    <!-- Physical Device Notch (iPhone Pill) -->
+    <div class="device-notch"></div>
     
-    <!-- Left Column: Design Concept & Interactive Narrative Panel -->
-    <div class="lg:col-span-7 text-white space-y-6 px-4">
-      <div class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-2xl bg-cake-gradient flex items-center justify-center shadow-lg shadow-pink-500/20">
-          <span class="text-2xl font-bold text-white">🍰</span>
-        </div>
-        <div>
-          <span class="text-xs font-semibold tracking-widest text-[#FF007F] uppercase">VPBank Digital Banking</span>
-          <h1 class="text-3xl font-extrabold tracking-tight">Cake Savings</h1>
+    <!-- Embedded Mobile Screen -->
+    <div class="device-screen">
+      <!-- Mock Mobile Status Bar -->
+      <div class="device-status-bar text-white">
+        <div id="status-bar-time" class="select-none">19:03</div>
+        <div class="flex items-center gap-1.5 select-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="17" width="3" height="3" rx="0.5"/><rect x="7" y="13" width="3" height="7" rx="0.5"/><rect x="12" y="9" width="3" height="11" rx="0.5"/><rect x="17" y="5" width="3" height="15" rx="0.5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a10 10 0 0 1 14 0"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><path d="M12 19h.01"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/></svg>
         </div>
       </div>
       
-      <p class="text-slate-400 text-sm sm:text-base leading-relaxed font-light">
-        Trải nghiệm tích lũy tài chính thế hệ mới dành cho Gen-Z. Biến tiết kiệm truyền thống thành một <strong class="text-pink-400 font-medium">AI Companion (AIgoal mate)</strong> thấu hiểu dòng tiền, động viên cảm xúc và tự động tối ưu hóa lộ trình từ những giấc mơ nhỏ nhất.
-      </p>
-
-      <!-- Interactive Narrative Guidelines -->
-      <div class="bg-slate-800/60 border border-slate-700/50 rounded-2xl p-5 space-y-4 backdrop-blur-md">
-        <h3 class="text-sm font-bold text-pink-400 uppercase tracking-wider">Kịch bản trải nghiệm (Product Narrative)</h3>
-        
-        <div class="space-y-3 text-xs sm:text-sm text-slate-300">
-          <div class="flex items-start gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-pink-500/20 text-[#FF007F] flex items-center justify-center shrink-0 font-bold mt-0.5">1</div>
-            <div>
-              <strong class="text-white">Splash & Đăng nhập (Màn 1 & 2):</strong> Màn hình chào mừng màu hồng sen đặc trưng của Cake, tự động chuyển tiếp tới ô nhập số điện thoại và PIN bảo mật.
-            </div>
-          </div>
-          <div class="flex items-start gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-pink-500/20 text-[#FF007F] flex items-center justify-center shrink-0 font-bold mt-0.5">2</div>
-            <div>
-              <strong class="text-white">Home Screen & AI Widget (Màn 3):</strong> Nhận diện dòng tiền vừa có lương và đề xuất gửi tiền vào mục tiêu du lịch Nhật Bản.
-            </div>
-          </div>
-          <div class="flex items-start gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-pink-500/20 text-[#FF007F] flex items-center justify-center shrink-0 font-bold mt-0.5">3</div>
-            <div>
-              <strong class="text-white">Goal Discovery (Màn 4):</strong> Chọn mục tiêu mơ ước. Chatbot tương tác tự nhiên hỏi han thời điểm, ngân sách và độ ưu tiên.
-            </div>
-          </div>
-          <div class="flex items-start gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-pink-500/20 text-[#FF007F] flex items-center justify-center shrink-0 font-bold mt-0.5">4</div>
-            <div>
-              <strong class="text-white">Saving Blueprint & Progress (Màn 5 & 6):</strong> Bản thiết kế lộ trình AI và Dashboard theo dõi tiến độ tích lũy thực tế thích ứng khi dòng tiền thực tế thay đổi.
-            </div>
-          </div>
-          <div class="flex items-start gap-2.5">
-            <div class="w-5 h-5 rounded-full bg-pink-500/20 text-[#FF007F] flex items-center justify-center shrink-0 font-bold mt-0.5">5</div>
-            <div>
-              <strong class="text-white">Ăn mừng hoàn thành (Màn 7):</strong> Khoảnh khắc hoàn thành mục tiêu rực rỡ với pháo hoa confetti và các chỉ số tích lũy cảm xúc.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quick Navigator Links -->
-      <div class="space-y-2">
-        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block">Điều khiển nhanh màn hình (Developer Jump)</span>
-        <div class="flex flex-wrap gap-2">
-          <button onclick="navigateTo('splash-screen')" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-pink-500 text-xs rounded-lg text-slate-300 hover:text-white transition-all">Màn 1: Splash</button>
-          <button onclick="navigateTo('login-screen')" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-pink-500 text-xs rounded-lg text-slate-300 hover:text-white transition-all">Màn 2: Đăng nhập</button>
-          <button onclick="navigateTo('home-screen')" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-pink-500 text-xs rounded-lg text-slate-300 hover:text-white transition-all">Màn 3: Trang chủ</button>
-          <button onclick="navigateTo('discovery-screen')" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-pink-500 text-xs rounded-lg text-slate-300 hover:text-white transition-all">Màn 4: Chọn mục tiêu</button>
-          <button onclick="navigateTo('blueprint-screen')" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-pink-500 text-xs rounded-lg text-slate-300 hover:text-white transition-all">Màn 5: Lộ trình Blueprint</button>
-          <button onclick="navigateTo('dashboard-screen')" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-pink-500 text-xs rounded-lg text-slate-300 hover:text-white transition-all">Màn 6: Dashboard</button>
-          <button onclick="navigateTo('celebration-screen')" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-pink-500 text-xs rounded-lg text-slate-300 hover:text-white transition-all">Màn 7: Ăn mừng 🎉</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right Column: Interactive Mobile Mockup (iPhone-style Container) -->
-    <div class="lg:col-span-5 flex justify-center">
-      <div class="device-mockup">
-        
-        <!-- Physical Device Notch (iPhone Pill) -->
-        <div class="device-notch"></div>
-        
-        <!-- Embedded Mobile Screen -->
-        <div class="device-screen">
-          
-          <!-- Mock Mobile Status Bar -->
-          <div class="device-status-bar">
-            <div id="status-bar-time" class="text-white select-none">19:03</div>
-            <div class="flex items-center gap-1.5 select-none">
-              <!-- Cell Signal -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="17" width="3" height="3" rx="0.5"/><rect x="7" y="13" width="3" height="7" rx="0.5"/><rect x="12" y="9" width="3" height="11" rx="0.5"/><rect x="17" y="5" width="3" height="15" rx="0.5"/></svg>
-              <!-- WiFi -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a10 10 0 0 1 14 0"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><path d="M12 19h.01"/></svg>
-              <!-- Battery -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/></svg>
-            </div>
-          </div>
-          
-          <!-- Screen Container (App Views inside) -->
-          <div class="screen-container">
+      <!-- Screen Container (App Views inside) -->
+      <div class="screen-container">
 
             <!-- ================= SCREEN 1: SPLASH SCREEN ================= -->
             <div id="splash-screen" class="app-screen active bg-[#FF007F] flex flex-col justify-between items-center py-10 px-6 cursor-pointer">
@@ -341,7 +267,7 @@
                       <button class="w-11 h-11 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center shadow-cake-sm border border-purple-100 quick-action-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M20 12v8H4v-8"/><path d="m12 2 10 10-10 10L2 12Z"/></svg>
                       </button>
-                      <span class="text-[9px] text-slate-500 font-semibold mt-1.5 text-center leading-tight">Nhận quốc tế</span>
+                      <span class="text-[9px] text-slate-500 font-semibold mt-1.5 text-center leading-tight">Nhận tiền quốc tế</span>
                     </div>
 
                     <div class="flex flex-col items-center">
@@ -369,7 +295,7 @@
                       <button class="w-11 h-11 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center shadow-cake-sm border border-teal-100 quick-action-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="12" x="3" y="6" rx="2"/><path d="M3 10h18"/><path d="M7 15h.01"/><path d="M11 15h.01"/></svg>
                       </button>
-                      <span class="text-[9px] text-slate-500 font-semibold mt-1.5 text-center leading-tight">Hóa đơn đã lưu</span>
+                      <span class="text-[9px] text-slate-500 font-semibold mt-1.5 text-center leading-tight">Hoá đơn đã lưu</span>
                     </div>
 
                     <div class="flex flex-col items-center">
@@ -402,26 +328,26 @@
               <!-- Fixed Bottom Nav (inside Home) -->
               <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-100 flex justify-between items-center px-4.5 py-2.5 shadow-lg z-30 bottom-nav-spacer">
                 <a href="#" class="bottom-nav-item flex flex-col items-center text-[#FF007F] font-extrabold" data-screen="home-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                  <span class="text-[8px] mt-1">TRANG CHỦ</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">VAY NHANH</span>
                 </a>
-                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="discovery-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-                  <span class="text-[8px] mt-1">MỤC TIÊU</span>
+                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="advance-screen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">ỨNG TRƯỚC</span>
                 </a>
                 <div class="relative -top-6">
-                  <button class="w-13 h-13 rounded-full bg-cake-gradient text-white flex items-center justify-center shadow-lg shadow-pink-500/30 border-4 border-white transition-all quick-action-btn">
+                  <button class="w-13 h-13 rounded-full bg-cake-gradient text-white flex items-center justify-center shadow-lg shadow-pink-500/30 border-4 border-white transition-all quick-action-btn" onclick="showToast('Tính năng quét QR!')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/></svg>
                   </button>
                 </div>
                 <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400 relative" data-screen="discovery-screen">
                   <span class="absolute -top-3.5 bg-cake-gradient text-[6px] font-black text-white px-1.5 py-0.5 rounded-full border border-white tracking-wide scale-90">ĐẾN 8.9%</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-piggy-bank"><path d="M19 5c-1.5 0-2.8 1.4-3 2-2.5-1-5.4-1-8 0C7.8 6.4 6.5 5 5 5c-1.6 0-3 1.3-3 3 0 1.3 1 2.3 2.2 2.8-.2.7-.2 1.5-.2 2.2 0 4.4 3.6 8 8 8 2.3 0 4.4-1 6-2.5a7.9 7.9 0 0 0 6-5.5c.2-.7.2-1.5.2-2.2 1.2-.5 2.2-1.5 2.2-2.8 0-1.7-1.4-3-3-3z"/><path d="M14 11h.01"/><path d="M9.5 20v2"/><path d="M14.5 20v2"/><path d="M12 2.5V5"/></svg>
-                  <span class="text-[8px] mt-1">TIẾT KIỆM</span>
+                  <span class="text-[8px] mt-1 font-bold">TIẾT KIỆM</span>
                 </a>
-                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="blueprint-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
-                  <span class="text-[8px] mt-1">KẾ HOẠCH</span>
+                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="invest-screen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">ĐẦU TƯ</span>
                 </a>
               </div>
 
@@ -522,26 +448,26 @@
               <!-- Fixed Bottom Nav (Discovery) -->
               <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-100 flex justify-between items-center px-4.5 py-2.5 shadow-lg z-30 bottom-nav-spacer">
                 <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="home-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                  <span class="text-[8px] mt-1">TRANG CHỦ</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">VAY NHANH</span>
                 </a>
-                <a href="#" class="bottom-nav-item flex flex-col items-center text-[#FF007F] font-extrabold" data-screen="discovery-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-                  <span class="text-[8px] mt-1">MỤC TIÊU</span>
+                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="advance-screen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">ỨNG TRƯỚC</span>
                 </a>
                 <div class="relative -top-6">
-                  <button class="w-13 h-13 rounded-full bg-cake-gradient text-white flex items-center justify-center shadow-lg shadow-pink-500/30 border-4 border-white transition-all quick-action-btn">
+                  <button class="w-13 h-13 rounded-full bg-cake-gradient text-white flex items-center justify-center shadow-lg shadow-pink-500/30 border-4 border-white transition-all quick-action-btn" onclick="showToast('Tính năng quét QR!')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/></svg>
                   </button>
                 </div>
-                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400 relative" data-screen="discovery-screen">
+                <a href="#" class="bottom-nav-item flex flex-col items-center text-[#FF007F] font-extrabold relative" data-screen="discovery-screen">
                   <span class="absolute -top-3.5 bg-cake-gradient text-[6px] font-black text-white px-1.5 py-0.5 rounded-full border border-white tracking-wide scale-90">ĐẾN 8.9%</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-piggy-bank"><path d="M19 5c-1.5 0-2.8 1.4-3 2-2.5-1-5.4-1-8 0C7.8 6.4 6.5 5 5 5c-1.6 0-3 1.3-3 3 0 1.3 1 2.3 2.2 2.8-.2.7-.2 1.5-.2 2.2 0 4.4 3.6 8 8 8 2.3 0 4.4-1 6-2.5a7.9 7.9 0 0 0 6-5.5c.2-.7.2-1.5.2-2.2 1.2-.5 2.2-1.5 2.2-2.8 0-1.7-1.4-3-3-3z"/><path d="M14 11h.01"/><path d="M9.5 20v2"/><path d="M14.5 20v2"/><path d="M12 2.5V5"/></svg>
-                  <span class="text-[8px] mt-1">TIẾT KIỆM</span>
+                  <span class="text-[8px] mt-1 font-bold">TIẾT KIỆM</span>
                 </a>
-                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="blueprint-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
-                  <span class="text-[8px] mt-1">KẾ HOẠCH</span>
+                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="invest-screen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">ĐẦU TƯ</span>
                 </a>
               </div>
 
@@ -653,26 +579,26 @@
               <!-- Fixed Bottom Nav (Blueprint) -->
               <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-3xl border border-slate-100 flex justify-between items-center px-4.5 py-2.5 shadow-lg z-30 bottom-nav-spacer">
                 <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="home-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                  <span class="text-[8px] mt-1">TRANG CHỦ</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">VAY NHANH</span>
                 </a>
-                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="discovery-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-                  <span class="text-[8px] mt-1">Mục tiêu</span>
+                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="advance-screen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">ỨNG TRƯỚC</span>
                 </a>
                 <div class="relative -top-6">
-                  <button class="w-13 h-13 rounded-full bg-cake-gradient text-white flex items-center justify-center shadow-lg shadow-pink-500/30 border-4 border-white transition-all quick-action-btn">
+                  <button class="w-13 h-13 rounded-full bg-cake-gradient text-white flex items-center justify-center shadow-lg shadow-pink-500/30 border-4 border-white transition-all quick-action-btn" onclick="showToast('Tính năng quét QR!')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/></svg>
                   </button>
                 </div>
                 <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400 relative" data-screen="discovery-screen">
                   <span class="absolute -top-3.5 bg-cake-gradient text-[6px] font-black text-white px-1.5 py-0.5 rounded-full border border-white tracking-wide scale-90">ĐẾN 8.9%</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-piggy-bank"><path d="M19 5c-1.5 0-2.8 1.4-3 2-2.5-1-5.4-1-8 0C7.8 6.4 6.5 5 5 5c-1.6 0-3 1.3-3 3 0 1.3 1 2.3 2.2 2.8-.2.7-.2 1.5-.2 2.2 0 4.4 3.6 8 8 8 2.3 0 4.4-1 6-2.5a7.9 7.9 0 0 0 6-5.5c.2-.7.2-1.5.2-2.2 1.2-.5 2.2-1.5 2.2-2.8 0-1.7-1.4-3-3-3z"/><path d="M14 11h.01"/><path d="M9.5 20v2"/><path d="M14.5 20v2"/><path d="M12 2.5V5"/></svg>
-                  <span class="text-[8px] mt-1">TIẾT KIỆM</span>
+                  <span class="text-[8px] mt-1 font-bold">TIẾT KIỆM</span>
                 </a>
-                <a href="#" class="bottom-nav-item flex flex-col items-center text-[#FF007F] font-extrabold" data-screen="blueprint-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
-                  <span class="text-[8px] mt-1">KẾ HOẠCH</span>
+                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400 font-extrabold text-[#FF007F]" data-screen="invest-screen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">ĐẦU TƯ</span>
                 </a>
               </div>
 
@@ -780,26 +706,26 @@
               <!-- Fixed Bottom Nav (Dashboard) -->
               <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-3xl border border-slate-100 flex justify-between items-center px-4.5 py-2.5 shadow-lg z-30 bottom-nav-spacer">
                 <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="home-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                  <span class="text-[8px] mt-1">TRANG CHỦ</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">VAY NHANH</span>
                 </a>
-                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="discovery-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-                  <span class="text-[8px] mt-1">Mục tiêu</span>
+                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="advance-screen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">ỨNG TRƯỚC</span>
                 </a>
                 <div class="relative -top-6">
-                  <button class="w-13 h-13 rounded-full bg-cake-gradient text-white flex items-center justify-center shadow-lg shadow-pink-500/30 border-4 border-white transition-all quick-action-btn">
+                  <button class="w-13 h-13 rounded-full bg-cake-gradient text-white flex items-center justify-center shadow-lg shadow-pink-500/30 border-4 border-white transition-all quick-action-btn" onclick="showToast('Tính năng quét QR!')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/></svg>
                   </button>
                 </div>
                 <a href="#" class="bottom-nav-item flex flex-col items-center text-[#FF007F] font-extrabold relative" data-screen="dashboard-screen">
                   <span class="absolute -top-3.5 bg-cake-gradient text-[6px] font-black text-white px-1.5 py-0.5 rounded-full border border-white tracking-wide scale-90">ĐẾN 8.9%</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-piggy-bank"><path d="M19 5c-1.5 0-2.8 1.4-3 2-2.5-1-5.4-1-8 0C7.8 6.4 6.5 5 5 5c-1.6 0-3 1.3-3 3 0 1.3 1 2.3 2.2 2.8-.2.7-.2 1.5-.2 2.2 0 4.4 3.6 8 8 8 2.3 0 4.4-1 6-2.5a7.9 7.9 0 0 0 6-5.5c.2-.7.2-1.5.2-2.2 1.2-.5 2.2-1.5 2.2-2.8 0-1.7-1.4-3-3-3z"/><path d="M14 11h.01"/><path d="M9.5 20v2"/><path d="M14.5 20v2"/><path d="M12 2.5V5"/></svg>
-                  <span class="text-[8px] mt-1">TIẾT KIỆM</span>
+                  <span class="text-[8px] mt-1 font-bold">TIẾT KIỆM</span>
                 </a>
-                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="blueprint-screen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
-                  <span class="text-[8px] mt-1">Kế hoạch</span>
+                <a href="#" class="bottom-nav-item flex flex-col items-center text-slate-400" data-screen="invest-screen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                  <span class="text-[8px] mt-1 font-bold">ĐẦU TƯ</span>
                 </a>
               </div>
 
@@ -864,12 +790,8 @@
             </div>
 
           </div>
-
         </div>
       </div>
-    </div>
-
-  </div>
 
   <script src="app.js"></script>
 </body>

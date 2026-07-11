@@ -73,7 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const allNavItems = document.querySelectorAll('.bottom-nav-item');
     allNavItems.forEach(item => {
       const targetScreen = item.getAttribute('data-screen');
-      if (targetScreen === activeScreenId) {
+      
+      // Treat savings-related screens as the "TIẾT KIỆM" flow
+      let isMatch = false;
+      if (targetScreen === 'discovery-screen' && 
+          ['discovery-screen', 'blueprint-screen', 'dashboard-screen'].includes(activeScreenId)) {
+        isMatch = true;
+      } else if (targetScreen === activeScreenId) {
+        isMatch = true;
+      }
+
+      if (isMatch) {
         item.classList.add('text-[#FF007F]', 'font-extrabold');
         item.classList.remove('text-slate-400');
       } else {
@@ -107,7 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
       const targetScreen = item.getAttribute('data-screen');
-      if (targetScreen) {
+      if (targetScreen === 'advance-screen') {
+        showToast("Tính năng Ứng Trước đang được phát triển!");
+      } else if (targetScreen === 'invest-screen') {
+        showToast("Tính năng Đầu Tư đang được phát triển!");
+      } else if (targetScreen) {
         navigateTo(targetScreen);
       }
     });

@@ -11,7 +11,7 @@
 
 body {
   font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  background-color: #0f172a;
+  background-color: #030712;
   color: #1e293b;
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Scrollbar styles */
@@ -338,4 +338,83 @@ body {
   background-repeat: repeat-x;
   background-size: 200px 40px;
   animation: floatClouds 30s linear infinite;
+}
+
+/* Live Timeline Active & Completed States */
+.timeline-step {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+}
+
+.timeline-step.active-step {
+  opacity: 1 !important;
+  background: rgba(255, 0, 127, 0.08);
+  border-color: rgba(255, 0, 127, 0.25);
+  box-shadow: 0 4px 20px rgba(255, 0, 127, 0.06);
+}
+
+.timeline-step.completed-step {
+  opacity: 0.8 !important;
+  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.15);
+}
+
+.timeline-step.completed-step .step-num {
+  background-color: #10b981 !important;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+.timeline-step.completed-step .step-status {
+  color: #10b981 !important;
+}
+
+/* Smartphone Mockup Upgrade */
+.device-mockup {
+  border: 6px solid #1a2436 !important;
+  box-shadow: 
+    0 25px 60px -15px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.device-mockup:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Responsive mobile styles */
+@media (max-width: 640px) {
+  body {
+    background-color: #ffffff !important;
+  }
+  .desktop-glow {
+    display: none !important;
+  }
+  .device-mockup {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+  .device-mockup:hover {
+    transform: none !important;
+  }
+  .device-screen {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .device-notch {
+    display: none !important;
+  }
+  .device-status-bar {
+    display: none !important;
+  }
+  .device-home-indicator {
+    display: none !important;
+  }
 }
