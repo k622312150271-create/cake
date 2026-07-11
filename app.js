@@ -130,18 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ================= SCREEN 1: SPLASH SCREEN =================
   const splashScreenEl = document.getElementById('splash-screen');
   if (splashScreenEl) {
-    // Click anywhere to skip splash
+    // Click anywhere to skip splash as fallback
     splashScreenEl.addEventListener('click', () => {
       if (currentScreenIdx === 0) {
         navigateTo('login-screen');
       }
     });
-    // Auto transition timer
-    setTimeout(() => {
-      if (currentScreenIdx === 0) {
-        navigateTo('login-screen');
-      }
-    }, 2500);
   }
 
   // ================= SCREEN 2: LOGIN INPUT SCREEN =================
