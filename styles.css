@@ -418,3 +418,96 @@ body {
     display: none !important;
   }
 }
+
+/* Fallback styles if Tailwind CDN fails to load */
+#splash-screen, #login-screen {
+  background-color: #FF007F !important;
+  color: #ffffff !important;
+}
+
+#splash-screen *, #login-screen * {
+  color: #ffffff !important;
+}
+
+#splash-screen {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 40px 24px !important;
+  box-sizing: border-box !important;
+}
+
+#splash-explore-btn {
+  background-color: #ffffff !important;
+  color: #FF007F !important;
+  border: none !important;
+  padding: 14px 20px !important;
+  border-radius: 16px !important;
+  font-weight: 800 !important;
+  font-size: 14px !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.2s ease !important;
+}
+
+#splash-explore-btn * {
+  color: #FF007F !important;
+}
+
+#splash-explore-btn:hover {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+#login-screen {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 24px !important;
+  box-sizing: border-box !important;
+}
+
+#login-form {
+  margin: auto 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+#login-form label {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+}
+
+#login-form input {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  width: 100% !important;
+}
+
+#login-form button[type="submit"] {
+  background-color: #ffffff !important;
+  color: #FF007F !important;
+  border: none !important;
+  padding: 14px !important;
+  border-radius: 16px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  margin-top: 24px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+#login-form button[type="submit"] * {
+  color: #FF007F !important;
+}
